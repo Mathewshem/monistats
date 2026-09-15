@@ -18,7 +18,17 @@ class Settings:
 
     symbols: list = field(
         default_factory=lambda: [
-            s.strip() for s in os.getenv("SYMBOLS", "BTC/USD,ETH/USD").split(",") if s.strip()
+            s.strip() for s in os.getenv("SYMBOLS", "BTC/USDT,ETH/USDT").split(",") if s.strip()
+        ]
+    )
+    forex_symbols: list = field(
+        default_factory=lambda: [
+            s.strip() for s in os.getenv("FOREX_SYMBOLS", "EURUSD=X,GBPUSD=X").split(",") if s.strip()
+        ]
+    )
+    stock_symbols: list = field(
+        default_factory=lambda: [
+            s.strip() for s in os.getenv("STOCK_SYMBOLS", "AAPL,MSFT").split(",") if s.strip()
         ]
     )
 

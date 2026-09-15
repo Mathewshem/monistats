@@ -31,7 +31,7 @@ def compute(df: pd.DataFrame, lookback: int = 24, z_window: int = 168) -> pd.Dat
     return out
 
 
-def latest_signal(df: pd.DataFrame, z_threshold: float = 2.0) -> dict | None:
+def latest_signal(df: pd.DataFrame, z_threshold: float = 0.1) -> dict | None:
     """
     Looks at the most recent row and decides whether it clears the threshold.
     Returns None if there isn't enough history yet, or a dict describing the
