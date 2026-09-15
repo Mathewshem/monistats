@@ -12,6 +12,7 @@ const config: Config = {
         paper: "#E7EAEC",
         up: "#C9A339",
         down: "#B85C45",
+        accent: "#2FBF8F",
       },
       fontFamily: {
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
